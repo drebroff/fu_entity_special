@@ -2,4 +2,5 @@ name: 'Funami entity special'
 type: module
 description: 'Awesome entity special'
 core: 8.x
+version: 0.0.1
 package: 'Funami'
