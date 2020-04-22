@@ -1,0 +1,22 @@
+# Funamy content entity routing definition
+
+entity.fu_content_entity.canonical:
+  route_name: entity.fu_content_entity.canonical
+  base_route: entity.fu_content_entity.canonical
+  title: 'View'
+
+entity.fu_content_entity.edit_form:
+  route_name: entity.fu_content_entity.edit_form
+  base_route: entity.fu_content_entity.canonical
+  title: 'Edit'
+
+entity.fu_content_entity.version_history:
+  route_name: entity.fu_content_entity.version_history
+  base_route: entity.fu_content_entity.canonical
+  title: 'Revisions'
+
+entity.fu_content_entity.delete_form:
+  route_name:  entity.fu_content_entity.delete_form
+  base_route:  entity.fu_content_entity.canonical
+  title: Delete
+  weight: 10

@@ -1,0 +1,12 @@
+fu_entity_special.fu_entity.*:
+  type: config_entity
+  label: 'Funami entity config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

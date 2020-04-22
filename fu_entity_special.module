@@ -1,0 +1,58 @@
+<?php
+
+/**
+ * @file
+ * Contains fu_entity_special.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function fu_entity_special_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the fu_entity_special module.
+    case 'help.page.fu_entity_special':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Awesome entity special') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function fu_entity_special_theme() {
+  $theme = [];
+  $theme['fu_content_entity'] = [
+    'render element' => 'elements',
+    'file' => 'fu_content_entity.page.inc',
+    'template' => 'fu_content_entity',
+  ];
+  $theme['fu_content_entity_content_add_list'] = [
+    'render element' => 'content',
+    'variables' => ['content' => NULL],
+    'file' => 'fu_content_entity.page.inc',
+  ];
+  return $theme;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK().
+ */
+function fu_entity_special_theme_suggestions_fu_content_entity(array $variables) {
+  $suggestions = [];
+  $entity = $variables['elements']['#fu_content_entity'];
+  $sanitized_view_mode = strtr($variables['elements']['#view_mode'], '.', '_');
+
+  $suggestions[] = 'fu_content_entity__' . $sanitized_view_mode;
+  $suggestions[] = 'fu_content_entity__' . $entity->bundle();
+  $suggestions[] = 'fu_content_entity__' . $entity->bundle() . '__' . $sanitized_view_mode;
+  $suggestions[] = 'fu_content_entity__' . $entity->id();
+  $suggestions[] = 'fu_content_entity__' . $entity->id() . '__' . $sanitized_view_mode;
+  return $suggestions;
+}

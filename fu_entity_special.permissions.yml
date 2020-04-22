@@ -1,0 +1,33 @@
+add funamy content entity entities:
+  title: 'Create new Funamy content entity entities'
+
+administer funamy content entity entities:
+  title: 'Administer Funamy content entity entities'
+  description: 'Allow to access the administration form to configure Funamy content entity entities.'
+  restrict access: true
+
+delete funamy content entity entities:
+  title: 'Delete Funamy content entity entities'
+
+edit funamy content entity entities:
+  title: 'Edit Funamy content entity entities'
+
+view published funamy content entity entities:
+  title: 'View published Funamy content entity entities'
+
+view unpublished funamy content entity entities:
+  title: 'View unpublished Funamy content entity entities'
+
+view all funamy content entity revisions:
+  title: 'View all Funamy content entity revisions'
+
+revert all funamy content entity revisions:
+  title: 'Revert all Funamy content entity revisions'
+  description: 'Role requires permission <em>view Funamy content entity revisions</em> and <em>edit rights</em> for funamy content entity entities in question or <em>administer funamy content entity entities</em>.'
+
+delete all funamy content entity revisions:
+  title: 'Delete all revisions'
+  description: 'Role requires permission to <em>view Funamy content entity revisions</em> and <em>delete rights</em> for funamy content entity entities in question or <em>administer funamy content entity entities</em>.'
+
+permission_callbacks:
+  - \Drupal\fu_entity_special\FuContentEntityPermissions::generatePermissions

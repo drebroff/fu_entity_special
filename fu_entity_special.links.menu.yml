@@ -1,0 +1,25 @@
+
+# Funami entity menu items definition
+entity.fu_entity.collection:
+  title: 'Funami entity'
+  route_name: entity.fu_entity.collection
+  description: 'List Funami entity (bundles)'
+  parent: system.admin_structure
+  weight: 99
+
+# Funamy content entity menu items definition
+entity.fu_content_entity.collection:
+  title: 'Funamy content entity list'
+  route_name: entity.fu_content_entity.collection
+  description: 'List Funamy content entity entities'
+  parent: system.admin_structure
+  weight: 100
+
+
+# Funamy content entity type menu items definition
+entity.fu_content_entity_type.collection:
+  title: 'Funamy content entity type'
+  route_name: entity.fu_content_entity_type.collection
+  description: 'List Funamy content entity type (bundles)'
+  parent: system.admin_structure
+  weight: 99
